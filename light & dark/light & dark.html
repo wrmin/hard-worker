@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wrmin</title>
+    <link rel="icon" type="image/png" href="/img/programming.png">
+    <link rel="stylesheet" href="/css/on & off.css">
+</head>
+<body>
+    <h1>Light & Dark Mode</h1>
+
+    <img src="/img/crescent-moon.png" alt="Moon" class="moon-image" id="moon">
+
+    <div id="div-button">
+        <button onclick="changeToDay()">Light Mode</button>
+        <button onclick="changeToNight()">Dark Mode</button>
+    </div>
+
+    <a id="home" href="/index.html">Home</a>
+
+    <script>
+        function changeToDay() {
+            document.body.classList.remove('moon-background');
+            document.body.classList.add('sun-background');
+            document.getElementById('moon').src='/img/sun.png';
+        }
+        
+        function changeToNight() {
+            document.body.classList.remove('sun-background');
+            document.body.classList.add('moon-background');
+            document.getElementById('moon').src='/img/crescent-moon.png';
+        }
+    </script>
+</body>
+</html>
